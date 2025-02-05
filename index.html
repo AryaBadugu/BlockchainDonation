@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charity Fund</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/ethers@5.2.0/dist/ethers.umd.min.js"></script>
+  </head>
+  <body>
+    <button id="connectButton">Connect Wallet</button>
+    <header>
+      <h1>Charity Fund Blockchain Project</h1>
+      <p>Donate securely and transparently with blockchain technology.</p>
+    </header>
+
+    <main>
+      <section id="donate">
+        <h2>Donate</h2>
+        <input
+          type="number"
+          id="donationAmount"
+          placeholder="Enter ETH amount"
+          min="0"
+          <!--
+          Added
+          min
+          attribute
+          for
+          validation
+          --
+        />
+        <button onclick="donate()">Donate</button>
+        <p id="donationStatus"></p>
+      </section>
+
+      <section id="withdraw">
+        <h2>Request Withdrawal</h2>
+        <input
+          type="text"
+          id="withdrawReason"
+          placeholder="Reason for withdrawal"
+          <!--
+        />
+        <input
+          type="number"
+          id="withdrawAmount"
+          placeholder="Enter ETH amount"
+          min="0"
+          <!--
+          Added
+          min
+          attribute
+          for
+          validation
+          --
+        />
+        <button onclick="requestWithdrawal()">Request Withdrawal</button>
+        <p id="withdrawalStatus"></p>
+      </section>
+
+      <section id="balance">
+        <h2>Check Balance</h2>
+        <button onclick="getBalance()">Get Contract Balance</button>
+        <p id="contractBalance"></p>
+      </section>
+      <section id="approve">
+        <h2>Approve Withdrawal (Admin)</h2>
+        <input type="number" id="requestId" placeholder="Request ID" />
+        <button onclick="approveWithdrawalRequest()">Approve Request</button>
+        <p id="approvalStatus"></p>
+      </section>
+
+      <section id="executeWithdraw">
+        <h2>Execute Withdrawal</h2>
+        <input type="number" id="withdrawRequestId" placeholder="Request ID" />
+        <button onclick="withdraw()">Withdraw Funds</button>
+        <p id="executeWithdrawStatus"></p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
